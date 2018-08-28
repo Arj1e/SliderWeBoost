@@ -1,27 +1,30 @@
 <html>
-<head></head>
+<head>
+    <link rel="stylesheet" href="style/style.css">
+    </head>
     <body>
         <iframe name="hiddenFrame" class="hide"></iframe>
 
-    <form action="http://arjie.cba.pl/UploadImg.php" method="post" enctype="multipart/form-data">
+    <form action="UploadImg.php" method="post" enctype="multipart/form-data" target="hiddenFrame">
         <input type="file" name="image">
         <input type="submit" name="send">
         </form>
             <?php
-        $servername = "mysql.cba.pl";
-        $username = "helpinguser";
-        $dbname="arjie";
-        $password= "Helpingais1";
+        $servername = "localhost";
+        $username = "root";
+        $dbname="slider";
+        $password= "";
         
          $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             
-        $sql="SELECT * FROM slider ORDER BY id";
-        
+        $sql="SELECT * FROM images ORDER BY id";
+        $images[];
         foreach($conn->query($sql) as $row){
             
-           echo $row[image];
+echo '<img src="data:image/png;base64,'.base64_encode( $row['image'] ).'"/>';     
+        
         }
-                
+            $conn=null;
             ?>
     </body>
 
