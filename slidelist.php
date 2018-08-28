@@ -13,8 +13,8 @@ error_reporting(0);
         foreach($conn->query($sql) as $row){
             
               
-        echo'<ul>'.$row[name];
-        echo '<button name="id" type="submit" value="'.$row[id].'">Usuń</button></ul>';
+        echo'<ul><p>'.$row[name];
+        echo '<button name="id" type="submit" value="'.$row[id].'">Usuń</button></p></ul>';
      
             
                             }

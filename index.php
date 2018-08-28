@@ -18,19 +18,17 @@
         
         <div id="slider-outer-container">
         
-        <img src="img/left.png" class="prev-left" alt="Wstecz">
+        <img width="30px" height="30px" src="img/left.png" class="prev-left" alt="Wstecz">
             <div class="slider-inside">
                 <?php include'SlideDownload.php'; ?>    
             
             </div>
-        <img src="img/right.png" class="next-right" alt="Dalej" >
+        <img width="30px" height="30px" src="img/right.png" class="next-right" alt="Dalej" >
         </div>
         
         
         <div id="slide-list">
-            <form action="SlideDelete.php" method="post" enctype="multipart/form-data">
-            
-            
+            <form action="SlideDelete.php" method="post" enctype="multipart/form-data" target="hiddenFrame">
             <?php include'slidelist.php'; ?>
             </form>
         </div>
