@@ -30,8 +30,8 @@
            <div class="row">
                 <div class="col-md ">
                 <div id="slider">
-                    <a href="#" class="next">Naprzód</a>
-                    <a href="#" class="prev">Wstecz</a>
+                    <a href="#" class="next">-></a>
+                    <a href="#" class="prev"><-</a>
                         <ul>
                             <?php include'php/SlideDownload.php'; ?>
     
@@ -58,6 +58,11 @@
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="row">
+        <div class="col-md-4 mx-auto">
+            <img width="60px" height="60px" src="img/gitlogo.png"></div>
+            <h4><a href="https://github.com/Arj1e/SliderWeBoost">Projekt można sprawdzić na moim profilu GitHub!</a></h4>
         </div>
       </div>
 

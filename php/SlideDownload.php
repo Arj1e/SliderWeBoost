@@ -8,7 +8,7 @@ error_reporting(0);
         $sql="SELECT * FROM images ORDER BY id";        
     
                 $count=0;
-                
+                /* Wyświetlanie wszystkich obiektów BLOB jako pliki graficzne w liście */
         foreach($conn->query($sql) as $row){
             
             if($count == 0){
