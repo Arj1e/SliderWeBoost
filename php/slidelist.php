@@ -14,7 +14,7 @@ error_reporting(0);
             
               
         echo'<li><p>'.$row[name];
-        echo '<button name="id" type="submit" value="'.$row[id].'">Usuń</button></p></li>';
+        echo '<button name="delete" id="delete" type="submit" value="'.$row[id].'">Usuń</button></p></li>';
      
             
                             }

@@ -44,6 +44,14 @@ body{
 #slider-list p {
 	
 }
+.php-output{
+    color: aliceblue;
+    
+    margin: auto;
+    background-color: cadetblue;
+    border-radius: 10px;
+    border: none;
+}
 
 
 

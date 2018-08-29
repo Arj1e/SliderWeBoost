@@ -1,8 +1,25 @@
 
-    <body>
-       <iframe name="hiddenFrame" class="hide"></iframe>
+   <form action="php/UploadImg.php" method="post" enctype="multipart/form-data" class="form-horizontal border border-primary rounded " target="php-output">
+<fieldset>
+<center>
+<!-- Form Name -->
+    <center>
+<legend>Dodaj Slajd</legend>
+        </center>
+<!-- File Button --> 
+<div class="form-group">
+  <div class="col-md-4">
+    <input id="file" name="image" class="input-file" type="file">
+      
+  </div>
+</div>
 
-    <form action="UploadImg.php" method="post" enctype="multipart/form-data" target="hiddenFrame">
-        <input type="file" name="image" class="form-file">
-        <input type="submit" name="send" class="form-submit">
-        </form>
+<div class="form-group">
+
+  <div class="col-md-4">
+    <button id="send" name="send" class="btn btn-primary">Wyślij</button>
+  </div>
+</div>
+</center>
+</fieldset>
+</form>

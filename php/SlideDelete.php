@@ -4,11 +4,11 @@ error_reporting(0);
         $username = "root";
         $dbname="slider";
         $password= "";
-        $postedId= $_POST['id'];
+        $postedId= $_POST['delete'];
         
         
          $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        if(isset($_POST['id'])){
+        if(isset($_POST['delete'])){
             
         try {
                     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
