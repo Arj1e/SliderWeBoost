@@ -16,7 +16,6 @@
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
       <script src="js/slider.js"></script>
-      <script src="js/progres.js"></script>
       
     <title>Slider jQuery</title>
 
@@ -54,7 +53,7 @@
             
             <div class="col-md">
                 <div id="slide-list">
-                    <form action="SlideDelete.php" method="post" enctype="multipart/form-data" target="php-output">
+                    <form action="php/SlideDelete.php" method="post" enctype="multipart/form-data" target="php-output">
                         <?php include'php/slidelist.php'; ?>
                     </form>
                 </div>

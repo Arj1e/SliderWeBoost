@@ -1,9 +1,7 @@
  <?php
 error_reporting(0);
-        $servername = "localhost";
-        $username = "root";
-        $dbname="slider";
-        $password= "";
+
+        include'Connect.php';
         
          $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             

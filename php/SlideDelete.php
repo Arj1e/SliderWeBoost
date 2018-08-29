@@ -1,9 +1,8 @@
  <?php
 error_reporting(0);
-        $servername = "localhost";
-        $username = "root";
-        $dbname="slider";
-        $password= "";
+     
+        include'Connect.php';
+
         $postedId= $_POST['delete'];
         
         
@@ -17,14 +16,14 @@ error_reporting(0);
                     $sql->bindParam(':deleteid',$postedId);
                     // use exec() because no results are returned
                     $sql->execute();
-                    echo "Delete Succes";
+                    echo "Slajd usunięty pomyślnie";
             }
             catch(PDOException $e)
                 {
                 echo $e;
                 }
         }else{
-            echo"Problem";
+            echo"Problem podczas usuwania";
         }
         
          $conn=null;

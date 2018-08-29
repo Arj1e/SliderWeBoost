@@ -1,13 +1,16 @@
 <?php
+error_reporting(0);
+
+        include'Connect.php';
+
         $name = $_FILES['image']['name'];
         $data= file_get_contents($_FILES['image']['tmp_name']);
 
-        $servername = "localhost";
-        $username = "root";
         $caption = "TESST";
-        $password = "";
-        $dbname = "slider";
 if(isset($_POST['send'])){
+    if(getimagesize($_FILES['image']['tmp_name']) != FALSE){
+        
+    
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     // set the PDO error mode to exception
@@ -17,11 +20,14 @@ try {
     $sql->bindParam(':caption',$caption);
     // use exec() because no results are returned
     $sql->execute();
-    echo "New record created successfully";
+    echo "Slajd przesłany pomyślnie";
     }
 catch(PDOException $e)
     {
-    echo $e;
+    echo "Napotkano problem podczas przesyłania pliku  :".$e;
+    }
+    }else{
+        echo "Dopuszczalne są tylko pliki graficzne!";
     }
 
 $conn = null;
