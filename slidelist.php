@@ -9,15 +9,15 @@ error_reporting(0);
             
         $sql="SELECT * FROM images ORDER BY id";        
         
-        echo '<li>';
+        echo '<ul>';
         foreach($conn->query($sql) as $row){
             
               
-        echo'<ul><p>'.$row[name];
-        echo '<button name="id" type="submit" value="'.$row[id].'">Usuń</button></p></ul>';
+        echo'<li><p>'.$row[name];
+        echo '<button name="id" type="submit" value="'.$row[id].'">Usuń</button></p></li>';
      
             
                             }
-        echo '</li>';
+        echo '</ul>';
             $conn=null;
  ?>

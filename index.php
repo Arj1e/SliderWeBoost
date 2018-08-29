@@ -1,6 +1,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/slidestyle.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <script
@@ -16,15 +17,14 @@
         <?php include'boxform.html' ?>
         </div>
         
-        <div id="slider-outer-container">
-        
-        <img width="30px" height="30px" src="img/left.png" class="prev-left" alt="Wstecz">
-            <div class="slider-inside">
-                <?php include'SlideDownload.php'; ?>    
-            
-            </div>
-        <img width="30px" height="30px" src="img/right.png" class="next-right" alt="Dalej" >
-        </div>
+        <div id="slider">
+  <a href="#" class="control_next">></a>
+  <a href="#" class="control_prev"><</a>
+  <ul>
+    <?php include'SlideDownload.php'; ?>
+    
+  </ul>  
+</div>
         
         
         <div id="slide-list">

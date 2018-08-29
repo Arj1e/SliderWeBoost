@@ -13,11 +13,11 @@
         foreach($conn->query($sql) as $row){
             
             if($count == 0){
-                echo '<img src="data:image/png;base64,'.base64_encode( $row['image'] ).'" class="active"/>';     
+                echo '<li><img width="400" height="300" src="data:image/png;base64,'.base64_encode( $row['image'] ).'"/></li>';     
 
             }else{
                
-                echo '<img src="data:image/png;base64,'.base64_encode( $row['image'] ).'"/>';     
+                echo '<li><img width="400" height="300" src="data:image/png;base64,'.base64_encode( $row['image'] ).'"/></li>';     
 
                  }
             $count++;
